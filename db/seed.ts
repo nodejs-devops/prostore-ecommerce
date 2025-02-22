@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import sampleData from './sample-data';
-// import { hash } from '@/lib/encrypt';
-import { hashSync } from 'bcrypt-ts-edge';
+import { hash } from '@/lib/encrypt';
+// import { hashSync } from 'bcrypt-ts-edge';
 
 async function main() {
   const prisma = new PrismaClient();
@@ -17,11 +17,11 @@ async function main() {
   for (let i = 0; i < sampleData.users.length; i++) {
     users.push({
       ...sampleData.users[i],
-      password: await hashSync(sampleData.users[i].password, 10),
+      password: await hash(sampleData.users[i].password),
     });
     console.log(
       sampleData.users[i].password,
-      await hashSync(sampleData.users[i].password, 10)
+      await hash(sampleData.users[i].password)
     );
   }
   await prisma.user.createMany({ data: users });
