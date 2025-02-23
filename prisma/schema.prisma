@@ -161,6 +161,6 @@ model Review {
 //   credentialBackedUp   Boolean
 //   transports           String?
 //   user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade)
- 
+
 //   @@id([userId, credentialID])
 // }

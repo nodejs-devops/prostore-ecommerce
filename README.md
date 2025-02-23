@@ -137,7 +137,9 @@ This project is from my **Next.js Ecommerce course**
      npm i query-string
      ```
 
-   * Databases (Postgres)
+   * Databases (Postgres) - Prisma ORM Setup
+     
+     First, install Prisma and initialize it in the backend:
    
      ```sh
      npm i -D prisma @prisma/client
@@ -162,6 +164,12 @@ This project is from my **Next.js Ecommerce course**
      # Seed users
      npx tsx ./db/seed
      ```
+
+     This will create a `prisma` directory with a `schema.prisma` file and a `.env` file.
+
+     ### Define the Prisma Schema
+
+     Edit `prisma/schema.prisma` to define your data model:
    
    * VS Code Extensions
    
