@@ -1,5 +1,7 @@
 # Prostore
 
+[![Vercel Production](https://github.com/nodejs-devops/prostore-ecommerce/actions/workflows/production.yml/badge.svg)](https://github.com/nodejs-devops/prostore-ecommerce/actions/workflows/production.yml)
+
 A full featured Ecommerce website built with Next.js, TypeScript, PostgreSQL and Prisma.
 
 <img src="/public/images/screen.png" alt="Next.js Ecommerce" />
